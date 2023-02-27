@@ -23,6 +23,10 @@ public class Cell {
 		this.plate = plate;
 	}
 	
+	public boolean isCellNull() {
+		return (this == null);
+	}
+	
 	public int getCoordinatesXofTheCell() {
 		return coordinatesXofTheCell;
 	}

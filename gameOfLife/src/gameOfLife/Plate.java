@@ -28,6 +28,10 @@ public class Plate {
 		for (int i = 0;i<numberCells;i++) {
 			int x = random.nextInt(depth);
 			int y = random.nextInt(length);
+			while(this.plate[x][y].isCellNull()) {
+				x = random.nextInt(depth);
+				y = random.nextInt(length);
+			} 
 			this.plate[x][y] = new Cell(x,y,this);
 		}
 		for (int i = 0;i<length;i++) {
